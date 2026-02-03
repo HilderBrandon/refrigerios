@@ -22,9 +22,8 @@
         <!-- Alertas -->
         <div id="alertas"></div>
 
-        <!-- Formulario -->
         <div class="row mb-4">
-            <div class="col-lg-6 mx-auto">
+            <div class="col-lg-4 mb-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title form-title">➕ Crear Nueva Área</h5>
@@ -49,11 +48,8 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Lista -->
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-8">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">📋 Áreas Registradas</h5>

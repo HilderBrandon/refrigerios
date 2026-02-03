@@ -21,7 +21,7 @@
         <div id="alertas"></div>
 
         <div class="row mb-4">
-            <div class="col-lg-6 mx-auto">
+            <div class="col-lg-4 mb-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title form-title">➕ Crear Nuevo Proveedor</h5>
@@ -52,10 +52,8 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-8">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">📋 Proveedores Registrados</h5>
@@ -117,11 +115,11 @@
                                 <div class="task-title">${escapeHtml(item.nombre)}</div>
                                 <div class="task-description">📋 NIT: ${escapeHtml(item.nit)}</div>
                                 <div class="task-date">
-                                    ${item.descuento_administrativo ? '✓ Descuento administrativo' : '✗ Sin descuento'}
+                                    ${(Number(item.descuento_administrativo) === 1) ? '✓ Descuento administrativo' : '✗ Sin descuento'}
                                     <br>📅 ${new Date(item.fecha_creacion).toLocaleDateString('es-ES')}
                                 </div>
                                 <div class="task-actions">
-                                    <button class="btn btn-editar" onclick="prepararEdicion(${item.id}, '${escapeAttr(item.nombre)}', '${escapeAttr(item.nit)}', ${item.descuento_administrativo})">✏️ Editar</button>
+                                    <button class="btn btn-editar" onclick="prepararEdicion(${item.id}, '${escapeAttr(item.nombre)}', '${escapeAttr(item.nit)}', ${Number(item.descuento_administrativo)})">✏️ Editar</button>
                                     <button class="btn btn-eliminar" onclick="confirmarEliminar(${item.id}, '${escapeAttr(item.nombre)}')">🗑️ Eliminar</button>
                                 </div>
                             </div>
@@ -136,7 +134,7 @@
             edicionId = id;
             document.getElementById('nombre').value = nombre;
             document.getElementById('nit').value = nit;
-            document.getElementById('descuento').checked = descuento == 1;
+            document.getElementById('descuento').checked = (Number(descuento) === 1);
             document.querySelector('.form-title').textContent = '✏️ Editar Proveedor';
             document.querySelector('button[type="submit"]').textContent = '✏️ Actualizar Proveedor';
             document.getElementById('btnCancelar').style.display = 'block';

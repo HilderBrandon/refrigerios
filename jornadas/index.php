@@ -21,7 +21,7 @@
         <div id="alertas"></div>
 
         <div class="row mb-4">
-            <div class="col-lg-6 mx-auto">
+            <div class="col-lg-4 mb-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title form-title">➕ Crear Nueva Jornada</h5>
@@ -52,10 +52,8 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-8">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">📋 Jornadas Registradas</h5>
